@@ -1,0 +1,40 @@
+{
+    "name": "ahmetbarut/laravel-sticky-todos",
+    "type": "package",
+    "require": {
+        "laravel/framework": "^9.0 || ^10"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "AhmetBarut\\LaravelStickyTodos\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AhmetBarut\\LaravelStickyTodos\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ahmet Barut",
+            "email": "ahmetbarut588@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AhmetBarut\\LaravelStickyTodos\\LaravelStickyTodosServiceProvider"
+            ]
+        }
+    }
+}
