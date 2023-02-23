@@ -23,14 +23,9 @@ class LaravelStickyTodosServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        if (!Schema::hasTable('todo_sticky_notes')) {
-            return;
-        }
         if (config('sticky-todos.enabled') === false) {
             return;
         }
-
-        $this->app[Kernel::class]->appendMiddlewareToGroup('web', InjectStickyTodo::class);
 
         $this->loadRoutesFrom(__DIR__ . '/../routes/api.php');
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
@@ -45,7 +40,13 @@ class LaravelStickyTodosServiceProvider extends ServiceProvider
         ], 'sticky-todos-views');
 
         $this->publishes([
-            __DIR__ . '/../public' => public_path('vendor/sticky-todos'),
+            __DIR__ . '/../resources/assets' => public_path('vendor/sticky-todos'),
         ], 'sticky-todos-public');
+
+        if (!Schema::hasTable('todo_sticky_notes')) {
+            return;
+        }
+
+        $this->app[Kernel::class]->appendMiddlewareToGroup('web', InjectStickyTodo::class);
     }
 }
