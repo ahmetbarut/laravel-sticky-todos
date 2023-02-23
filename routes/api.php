@@ -22,5 +22,6 @@ Route::delete('api/' . config('sticky-todos.router_prefix') . '/todos/{todo}', f
 
 Route::put('api/' . config('sticky-todos.router_prefix') . '/todos-check/{todo}', function (StickyTodo $todo, Request $request) {
     $todo->is_done = $request->is_done;
+    $todo->save();
     return $todo;
 });
