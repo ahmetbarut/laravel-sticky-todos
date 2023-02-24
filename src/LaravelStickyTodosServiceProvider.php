@@ -43,7 +43,7 @@ class LaravelStickyTodosServiceProvider extends ServiceProvider
             __DIR__ . '/../resources/assets' => public_path('vendor/sticky-todos'),
         ], 'sticky-todos-public');
 
-        if (!Schema::hasTable('todo_sticky_notes')) {
+        if (!Schema::hasTable('sticky_todos')) {
             return;
         }
 

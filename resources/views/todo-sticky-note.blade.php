@@ -1,4 +1,6 @@
-<div id="todo-sticky-note" data-config="{{ $config }}"></div>
+<div id="todo-sticky-note" data-config="{{ $config }}"
+style="z-index: 1000;"
+></div>
 
 <script>
     (function (){
