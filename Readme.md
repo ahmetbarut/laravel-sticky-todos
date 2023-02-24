@@ -2,6 +2,8 @@
 
 we can liken Sticky Todos to a notepad. However, Sticky Todos is specifically designed for the use of Laravel developers as a Vue.js component package. Like a notepad, it allows users to quickly take notes and create to-do lists. However, Sticky Todos is specially designed to meet the needs of developers who want to add to-do list features in Laravel applications.
 
+![Sticky Todos](./example.gif)
+
 ## Installation
 
 ### Step 1: Install the package
