@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('todo_sticky_notes', function (Blueprint $table) {
+        Schema::create('sticky_todos', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->text('description');
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('todo_sticky_notes');
+        Schema::dropIfExists('sticky_todos');
     }
 };

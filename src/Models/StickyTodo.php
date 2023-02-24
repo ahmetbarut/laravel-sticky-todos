@@ -9,8 +9,6 @@ class StickyTodo extends Model
 {
     use HasFactory;
 
-    protected $table = 'todo_sticky_notes';
-
     protected $fillable = [
         'title',
         'description',
